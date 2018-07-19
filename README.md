@@ -1,40 +1,25 @@
 # WePY Templates
 
-This project is a collection of all the templates from `wepy lsit`
+wepy的typescipt模板
 
 ## Usage
 
 ```
-# List all avalible templates
-$ wepy list
-
-# List all github opensource projects
-$ wepy list --github
-
-# Init a project from templates
-# e.g., Init a standard project: wepy init standard myproject
-# e.g., Init a github project: wepy init wepyjs/wepy-wechat-demo
-$ wepy init ${template-name} myfolder
+安装 wepy-cli：
+npm install -g wepy-cli
+拉取本模板
+wepy init liuguolong1991/wepy-typescript-demo my-project
+cd my-project
+npm run dev
 ```
 
-## Template List
-
-| Name | Description |
-| --- | --- |
-| [empty](https://github.com/wepyjs/wepy_templates/tree/master/templates/empty) | 空模板 |
-| [standard](https://github.com/wepyjs/wepy_templates/tree/master/templates/standard) | 模认模板，开启了promise、Async Function等 |
-
-## Github Project
-
-| Repository | Stars | Description | Last Updated |
-| --- | --- | --- | --- |
-| [wepyjs/wepy-wechat-demo](https://github.com/wepyjs/wepy-wechat-demo) | 346 | wepy仿微信聊天界面 | 2018-06-20T09:18:11Z |
-| [wepyjs/wepy-weui-demo](https://github.com/wepyjs/wepy-weui-demo) | 252 | WeUI 在 WePY 中的使用示例，同一份代码可以运行在小程序上和Web上 | 2018-01-06T14:02:02Z |
-| [brucx/wepy-zanui-demo](https://github.com/brucx/wepy-zanui-demo) | 161 | 基于zanui-weapp移植的一套wepy界面框架 | 2018-05-10T08:09:50Z |
-
+## PS
+由于wepy目前没有支持tslint，所以在wepy就算TS有错，也是能编译运行的，只能通过die的提示来避免错误。
+目前用的vscode,假如有错，在左边目录树就会标红，还算可以。
+并且用ts需要对wepy和wx对象进行定义，虽然有@types/wepy库可以使用，但是感觉没人更新的样子，很多api都没在里面
+因此我在模板下增加了typings/global.d.ts  目的就是为了增加一些@types/wepy没有的定义
+因为我也是用到啥才加啥，也没有说去扫一遍文档，所以大家遇到没有的情况也自己加一加吧0.0
 ## Links
 
-[Contributing](https://github.com/wepyjs/wepy-templates/blob/master/CONTRIBUTING.md)
-
-[License MIT](https://github.com/wepyjs/wepy-templates/blob/master/LICENSE)
+[wepy](https://tencent.github.io/wepy/)
 
