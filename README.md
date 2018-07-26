@@ -14,7 +14,7 @@ npm run dev
 ```
 
 ## PS
-由于wepy目前没有支持tslint，所以在wepy就算TS有错，也是能编译运行的，只能通过die的提示来避免错误。
+由于wepy目前没有支持tslint，所以在wepy就算TS有错，也是能编译运行的，只能通过ide的提示来避免错误。
 目前用的vscode,假如有错，在左边目录树就会标红，还算可以。
 并且用ts需要对wepy和wx对象进行定义，虽然有@types/wepy库可以使用，但是感觉没人更新的样子，很多api都没在里面
 因此我在模板下增加了typings/global.d.ts  目的就是为了增加一些@types/wepy没有的定义
