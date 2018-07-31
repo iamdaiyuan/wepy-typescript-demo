@@ -1,10 +1,4 @@
-// Type definitions for wepy 1.7
-// Project: https://github.com/Tencent/wepy#readme
-// Definitions by: Jiayu Liu <https://github.com/Jimexist>
-// Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-// TypeScript Version: 2.2
 declare module 'wepy' {
-    import wepy from 'wepy';
     import component from 'wepy/component'
     import mixin from "wepy/mixin";
     import event from "wepy/event";
@@ -14,11 +8,12 @@ declare module 'wepy' {
     import base from "wepy/base";
     import { WxEnhances } from "wepy/wx_enhanced";
     interface baseWxEnhances extends WxEnhances {
+        getUpdateManager():any;
         reLaunch(params: { url: string }): Promise<any>;
         navigateBack(params: { delta: Number }): Promise<any>;
         downloadFile(params: { url: string,header?:any }): Promise<wx.DownloadFileResult>;
         showLoading(params: { title: string,mask?:boolean }): Promise<any>;
-        getSystemInfoSync(): Promise<wx.GetSystemInfoResult>;
+        getSystemInfoSync: ()=>Promise<wx.GetSystemInfoResult>;
     }
     class InterfaceComponent extends component {
         getCurrentPages(): [any];
@@ -30,9 +25,11 @@ declare module 'wepy' {
         $parent:App|any;
         onLoad(params, data);
     }
+    class InterfaceApp extends app {
+    }
     export type Event = typeof event;
     export type Component = typeof InterfaceComponent;
-    export type App = typeof app;
+    export type App = typeof InterfaceApp;
     export type Page = typeof InterfacePage;
     export type Mixin = typeof mixin;
 
@@ -57,7 +54,7 @@ declare module 'wepy' {
     export default defaultExport;
 }
 declare namespace wx {
-
+    export function getUpdateManager(): any;
     export interface BaseOptions {
   
         /**

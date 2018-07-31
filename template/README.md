@@ -1,37 +1,25 @@
-# kaiXinXiongLianMeng-wxmp
+# WePY Templates
 
-#### 项目介绍
-开心熊联盟-微信小游戏巨合平台
+wepy的typescipt模板
 
-#### 软件架构
-软件架构说明
+## Usage
 
+```
+安装 wepy-cli：
+npm install -g wepy-cli
+拉取本模板
+wepy init liuguolong1991/wepy-typescript-demo my-project
+cd my-project
+npm run dev
+```
 
-#### 安装教程
+## PS
+由于wepy目前没有支持tslint，所以在wepy就算TS有错，也是能编译运行的，只能通过ide的提示来避免错误。
+目前用的vscode,假如有错，在左边目录树就会标红，还算可以。
+并且用ts需要对wepy和wx对象进行定义，虽然有@types/wepy库可以使用，但是感觉没人更新的样子，很多api都没在里面
+因此我在模板下增加了typings/global.d.ts  目的就是为了增加一些@types/wepy没有的定义
+因为我也是用到啥才加啥，也没有说去扫一遍文档，所以大家遇到没有的情况也自己加一加吧0.0
+## Links
 
-1. xxxx
-2. xxxx
-3. xxxx
+[wepy](https://tencent.github.io/wepy/)
 
-#### 使用说明
-
-1. xxxx
-2. xxxx
-3. xxxx
-
-#### 参与贡献
-
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
-
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [http://git.mydoc.io/](http://git.mydoc.io/)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
